@@ -28,6 +28,11 @@ jobs:
       - name: Build project with Maven
         run: mvn clean install
 
+      - name: Check Docker and Docker Compose versions
+        run: |
+          docker --version
+          docker-compose --version
+
       - name: Set up Docker
         run: |
           sudo apt-get update
