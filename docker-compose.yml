@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: java-docker
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads
